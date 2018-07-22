@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/subjectIndex/subject",
+    "pages/classification/classification",
+    "pages/downLoad/downLoad",
+    "pages/userMine/userMine",
+    "pages/settingApp/settingApp",
+    "pages/subjectDetail/subjectDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#d81e06",
+    "navigationBarTitleText": "菜谱精灵",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f1f1f1"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#d81e06",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/subjectIndex/subject",
+        "text": "专题",
+        "iconPath": "static/images/indexNo.png",
+        "selectedIconPath": "static/images/indexSelected.png"
+      },
+      {
+        "pagePath": "pages/classification/classification",
+        "text": "分类",
+        "iconPath": "static/images/classfityNo.png",
+        "selectedIconPath": "static/images/classFitySelected.png"
+      },
+      {
+        "pagePath": "pages/downLoad/downLoad",
+        "text": "下载",
+        "iconPath": "static/images/downLoadNo.png",
+        "selectedIconPath": "static/images/downLoadSelected.png"
+      },
+      {
+        "pagePath": "pages/userMine/userMine",
+        "text": "我的",
+        "iconPath": "static/images/userMineNo.png",
+        "selectedIconPath": "static/images/userMineSelected.png"
+      },
+      {
+        "pagePath": "pages/settingApp/settingApp",
+        "text": "设置",
+        "iconPath": "static/images/settingNo.png",
+        "selectedIconPath": "static/images/settingSelected.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+.subjectIndex{
+  width: 100%;
+  height: 1110rpx;
+}
+.subjectSearch{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20rpx;
+}
+.subjectSearchShake{
+  width: 70rpx;
+  height: 70rpx;
+  background: #d81e06;
+  border-radius: 50%;
+}
+.subjectSearchShake text{
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 70rpx;
+}
+.subjectIndexSwiper{
+  width: 100%;
+  height:400rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+.swiperFoodItem{
+  position: relative;
+}
+.foodItemName{
+  width: 100%;
+  height: auto;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 40rpx;
+  font-size: 40rpx;
+  font-weight: 500;
+  padding-left: 20rpx;
+  padding: 10rpx 0 10rpx 20rpx;
+  background: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.subjectChooseClass{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+.subjectIndexNewest,.subjectIndexHottest{
+  width: 43%;
+  height: 100rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.newest{
+  font-size: 40rpx;
+  font-weight: 500;
+}
+
+.subjectIndexMenu{
+  width: 100%;
+  height: auto;
+  background: #fff;
+}

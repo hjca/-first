@@ -1,0 +1,11 @@
+<!--搜索框  -->
+<view class='wx-search-area'>
+  <view class='wx-search-area-icon'>
+    <image src='../../static/images/search.png' class='wx-search-area-img'></image>
+  </view>
+  <input type='text' 
+    placeholder='菜谱搜索' 
+    class='wx-search-area-input'
+    confirm-type='search'
+    bindconfirm='startSearch'/>
+</view>

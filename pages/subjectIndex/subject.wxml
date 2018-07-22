@@ -1,0 +1,63 @@
+<!--菜谱精灵首页  -->
+<scroll-view class='subjectIndex' 
+  scroll-y="true" 
+  upper-threshold='50'
+  lower-threshold='50'
+  bindscrolltoupper="upper"
+  bindscrolltolower="lower">
+
+   <!--搜索框的区域  -->
+   <view class='subjectSearch'>
+    <!--摇一摇  -->
+    <view class='subjectSearchShake'>
+      <text class='icon-phonesnake'></text>
+    </view>
+    <!-- 应用搜索组件  -->
+    <wxSearchArea></wxSearchArea>
+   </view>
+  
+  <!--首页专题中的轮播图  -->
+  <swiper  class='subjectIndexSwiper'
+    indicator-dots='true'
+    indicator-active-color='#ffffff'
+    autoplay='true'
+    interval='2000'
+    circular='true'>
+   
+    <swiper-item
+      class='swiperFoodItem'
+      wx:for='{{swiperData}}'
+      wx:key='unique'
+      wx:for-index="swiperIndex" 
+      wx:for-item="swiperItem"
+      data-foodId='swiperItem.foodId'>
+        <image src="{{swiperItem.foodUrl}}" class="slide-image"/>
+        <view class='foodItemName'>{{ swiperItem.foodName }}</view>
+      </swiper-item>
+
+  </swiper >
+
+  <!--最新与最热两种类别  -->
+  <view class='subjectChooseClass'>
+    <!--最新  -->
+    <view class='subjectIndexNewest'>
+      <text class='icon-foods'></text>
+      <text class='newest'>最新</text>
+    </view>
+    <!--最热  -->
+    <view class='subjectIndexHottest'>
+      <text class='icon-fire'></text>
+      <text class='hottest'>最热</text>
+    </view>
+  </view>
+
+  <!--菜单列表  -->
+  <view class='subjectIndexMenu'>
+    <wxMenuItem 
+      wx:for='{{menuTypeData}}' 
+      wx:key='unique' 
+      wx:for-item="menuItem"
+      menuItems='{{ menuItem }}'
+      catch:watchDetail='watchDetail'></wxMenuItem>
+  </view>
+</scroll-view>

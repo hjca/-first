@@ -1,0 +1,20 @@
+<!--菜谱类别  -->
+<view class='wx-menu-item' catchtap='_watchDetail'>
+  <view class='wx-menu-type-img'>
+    <image src='{{ menuItems.foodImg }}' />
+  </view>
+  <view class='wx-menu-type-info'>
+    <view class='wx-menu-type-info-name'>{{ menuItems.foodName }}</view>
+    <view class='wx-menu-type-info-detail'>
+      <text class='wx-item-menus'>共{{ menuItems.foodNums }}个菜谱</text>
+      <view class='wx-food-stars'>
+        <image src='../../static/images/stars.png'></image>
+        <text>{{ menuItems.foodStars }}</text>
+      </view>
+      <view class='wx-food-yulan'>
+        <image src='../../static/images/yulan.png'></image>
+        <text>{{ menuItems.foodPreview }}</text>
+      </view>
+    </view>
+  </view>
+</view>

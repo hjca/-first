@@ -1,0 +1,25 @@
+.wx-search-area{
+  width: 560rpx;
+  height: auto;
+  background: rgba(255,255,255,0.6);
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 10rpx;
+}
+.wx-search-area-icon{
+  width: 80rpx;
+  text-align: center;
+  margin-right: 10rpx;
+}
+.wx-search-area-img{
+  width: 60%;
+  height: 60%;
+  margin-top: 12rpx;
+}
+.wx-search-area-input{
+  height: 60rpx;
+  font-size: 30rpx;
+  color: #000;
+  flex: 1;
+}
