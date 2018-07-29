@@ -20,7 +20,7 @@ Component({
   methods: {
     // 查看详情
     _watchDetail(){
-      this.triggerEvent("watchDetail")
+      this.triggerEvent("watchDetail", this.data.menuItems.foodName)
     }
   },
   ready(){

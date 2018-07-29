@@ -7,14 +7,14 @@ Page({
    */
   data: {
     swiperData:"",          //轮播图加载的数据
-    menuTypeData: "",          //菜系种类的数据
+    menuTypeData: [],          //菜系种类的数据
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
-    var that = this
+    var that = this;
     // 获取首页轮播图数据
     API.ajax('', function (res) {
       //这里既可以获取模拟的res
@@ -22,13 +22,8 @@ Page({
         swiperData:res
       });
     });
-    // 获取首页菜系种类数据
-    API.eoLinkerAjax('/index/menuList',function(result){
-      wx.hideLoading();
-      that.setData({
-        menuTypeData:result.data.data.list
-      })
-    })
+    
+    that.ajaxMenuList();
   },
 
   /**
@@ -63,14 +58,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+   
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+    this.ajaxMenuList();
   },
 
   /**
@@ -79,16 +74,30 @@ Page({
   onShareAppMessage: function () {
   
   },
-  // 上拉加载
-  upper:function(){
-  },
-  // 下拉刷新
-  lower:function(){
-
-  },
-  watchDetail(){
+  
+  watchDetail(item){
+    wx.setStorage({
+      key: 'detailTitle',
+      data: item.detail,
+    });
+    wx.setStorage({
+      key: 'menuId',
+      data: item.currentTarget.dataset.foodid,
+    })
     wx.navigateTo({
       url: '../subjectDetail/subjectDetail',
+    })
+  },
+
+  //请求菜单种类数据
+  ajaxMenuList(){
+    let that = this;
+    // 获取首页菜系种类数据
+    API.eoLinkerAjax('/index/menuList', function (result) {
+      wx.hideLoading();
+      that.setData({
+        menuTypeData: that.data.menuTypeData.concat(result.data.data.list)
+      })
     })
   }
 })

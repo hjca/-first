@@ -1,0 +1,30 @@
+<view class="wx-detail-foodlist">
+  <view class='wx-detail-img'>
+  <!-- 图片 -->
+    <image src="{{ foodItem.menuImg }}" lazy-load="{{isLay}}"></image>
+
+    <!-- 名称 -->
+    <view class='wx-detail-name-area'>
+      <text class='wx-detail-item-name'>{{ foodItem.foodName }}</text>
+      <text class='wx-detail-item-ingredients'
+      wx:for="{{ foodItem.ingredients }}"
+      wx:key='unique'
+      wx:for-item="item">{{ item }}</text>
+    </view>
+  </view>
+
+  <!-- 星星数和阅览量 -->
+  <view class="wx-detail-stars">
+
+    <!-- 星星的数量 -->
+    <view class='wx-detail-item-stars'>
+      <image src='../../static/images/stars.png'></image>
+      <text>{{foodItem.stars}}</text>
+    </view>
+
+    <!-- 阅览量 -->
+    <view class='wx-detail-item-watch'>
+      <image src='../../static/images/yulan.png'></image>
+      <text>{{ foodItem.watch }}</text></view>
+  </view>
+</view>

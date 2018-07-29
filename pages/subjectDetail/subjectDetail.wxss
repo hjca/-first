@@ -1,1 +1,10 @@
-/* pages/subjectDetail/subjectDetail.wxss */
+.foodList{
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+.foodItem{
+  width: 100%;
+  height: auto;
+  border-bottom: 1px dashed #999;
+}

@@ -45,7 +45,7 @@ function ajaxMenu(data = '', fn, method = "get", header = {}) {
 }
 
 // 使用eoLinker获取首页菜系数据
-function eoLinkerAjax(url,successFun,method="get",leary='1',header={}){
+function eoLinkerAjax(url,successFun,data,method="GET",leary='1',header={}){
   // 是否显示Loadding
   if(leary == 1){
     wx.showLoading({
@@ -56,7 +56,7 @@ function eoLinkerAjax(url,successFun,method="get",leary='1',header={}){
   wx.request({
     url: API_HOST + url,
     method: method,
-    data: {},
+    data: data,
     header: header ? header : { "Content-Type": "application/json" },
     success: function (res) {
       successFun(res);

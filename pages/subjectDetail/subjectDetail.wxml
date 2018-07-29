@@ -1,2 +1,8 @@
-<!--pages/subjectDetail/subjectDetail.wxml-->
-<text>pages/subjectDetail/subjectDetail.wxml</text>
+<scroll-view class='foodList'>
+  <view class='foodItem' wx:for='{{ foodList }}'
+    wx:key='unique' 
+    wx:for-item="foodItem"
+  >
+    <foodItme foodItem="{{ foodItem }}"></foodItme>
+  </view>
+</scroll-view>

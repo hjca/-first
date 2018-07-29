@@ -1,10 +1,5 @@
 <!--菜谱精灵首页  -->
-<scroll-view class='subjectIndex' 
-  scroll-y="true" 
-  upper-threshold='50'
-  lower-threshold='50'
-  bindscrolltoupper="upper"
-  bindscrolltolower="lower">
+<view class='subjectIndex' >
 
    <!--搜索框的区域  -->
    <view class='subjectSearch'>
@@ -58,6 +53,7 @@
       wx:key='unique' 
       wx:for-item="menuItem"
       menuItems='{{ menuItem }}'
+      data-foodId='{{ menuItem.foodID }}'
       catch:watchDetail='watchDetail'></wxMenuItem>
   </view>
-</scroll-view>
+</view>
