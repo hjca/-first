@@ -2,6 +2,7 @@
 <view class='wx-menu-item' catchtap='_watchDetail'>
   <view class='wx-menu-type-img'>
     <image src='{{ menuItems.foodImg }}' />
+    <text class='icon-foods'></text>
   </view>
   <view class='wx-menu-type-info'>
     <view class='wx-menu-type-info-name'>{{ menuItems.foodName }}</view>

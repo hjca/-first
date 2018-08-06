@@ -1,1 +1,6 @@
-{}
+{
+  "usingComponents": {
+    "wxSearchArea": "/components/searchComp/searchComp",
+    "classifyList":"classifMenu/foodMenu"
+  }
+}

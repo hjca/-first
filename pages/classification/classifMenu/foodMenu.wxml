@@ -1,0 +1,18 @@
+<!-- 分类界面 -->
+<view class='menuList'>
+  <view class='titleClassify'>
+    <text>自定义分类</text>
+  </view>
+
+  <view class='classifyData'>
+    <view class='classifyItem'
+      wx:for='{{menuList}}'
+      wx:key='unique'
+      wx:for-index="menuIndex" 
+      wx:for-item="menuItem"
+      data-iteId='{{ menuItem.id }}'
+    >
+      {{ menuItem.name }}
+    </view>
+  </view>
+</view>

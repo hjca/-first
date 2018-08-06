@@ -2,5 +2,6 @@
   "usingComponents":{
     "wxSearchArea":"/components/searchComp/searchComp",         
     "wxMenuItem": "/components/menuItem/menuItem"          
-  }
+  },
+  "backgroundTextStyle":"dark"
 }

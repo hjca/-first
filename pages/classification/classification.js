@@ -1,18 +1,26 @@
 // pages/classification/classification.js
+var API = require('../../utils/util.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    menuData:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let that = this;
+    // 获取首页菜系种类数据
+    API.eoLinkerAjax('/menu/menuClassify', function (result) {
+      wx.hideLoading();
+      that.setData({
+        menuData: that.data.menuData.concat(result.data.data.list)
+      })
+    })
   },
 
   /**

@@ -1,2 +1,11 @@
-<!--pages/classification/classification.wxml-->
-<text>分类</text>
+<view class="foodMenuClass">
+  <!--头部搜索框区域  -->
+  <view class='classSearchArea'>
+    <wxSearchArea></wxSearchArea>
+  </view>
+
+  <!-- 正文内容 -->
+  <view class='classifyContent'>
+    <classifyList menuList="{{ menuData }}"></classifyList>
+  </view>
+</view>

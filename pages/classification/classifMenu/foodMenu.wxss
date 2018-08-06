@@ -1,0 +1,54 @@
+.menuList{
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+.titleClassify{
+  height: 80rpx;
+  background: #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+.titleClassify text{
+  font-size: 30rpx;
+  color: #333;
+}
+.classifyData{
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20rpx 0;
+}
+.classifyItem{
+  width: 320rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  background: linear-gradient(#fff , #f1f1f1);
+  border: 1px solid #ccc;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 32rpx;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.classifyItem text{
+  width: 320rpx;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 32rpx;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
